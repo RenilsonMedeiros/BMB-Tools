@@ -1,0 +1,73 @@
+.newincident-container {
+    width: 100%;
+    max-width: 1120px;
+    height: 100vh;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newincident-container .content {
+    width: 100%;
+    padding: 96px;
+    background: #d3d3d6;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newincident-container .content section {
+    width: 100%;
+    max-width: 380px;
+}
+
+.newincident-container .content section h1 {
+    margin: 64px 0 32px;
+    font-size: 32px;
+}
+.newincident-container .content section p {
+    font-size: 18px;
+    color: #737380;
+    line-height: 32px;
+}
+
+.newincident-container .content div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.newincident-container .content .button {
+    margin-left: 20px;
+}
+
+.newincident-container .content .buttonCancel {
+    width: 60%;
+    height: 60px;
+    background: #FFF;
+    border: 0;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-top: 16px;
+    transition: filter 0.2s;
+}
+
+.newincident-container .content .buttonCancel:hover {
+    filter: brightness(95%);
+}
+
+.newincident-container .content form {
+    width: 100%;
+    max-width: 450px;
+
+}
+.newincident-container .content form input,
+.newincident-container .content form textarea {
+    margin-top: 8px;
+}
