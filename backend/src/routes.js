@@ -1,13 +1,23 @@
 const express = require('express');
+const crypto = require('crypto');
+
+const connection = require('./database/connection');
 
 const routes = express.Router();
 
-routes.delete('/', (request, response) => {
-  const body = request.body;
+routes.post('/user', async (request, response) => {
+  const { name, senha, admKey } = request.body;
 
-  console.log(body);
+  const id = crypto.randomBytes(4).toString('HEX');
 
-  return response.json({ viu : 'caramba' });
+  await connection('users').insert({
+    id,
+    name,
+    senha,
+    admKey,
+  })
+
+  return response.json({ id, name });
 });
 
 module.exports = routes;

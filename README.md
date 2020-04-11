@@ -1,5 +1,5 @@
 # BMB-Tools
- Treinando meu primeiro protótipo utilizando React e NodeJ
+ Treinando meu primeiro protótipo utilizando React e NodeJS
  ---
 
  Após instalar todos os aps necessários faça:
