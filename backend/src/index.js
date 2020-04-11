@@ -1,15 +1,9 @@
 const express = require('express');
+const routes = require('./routes');
 
 const app = express();
 
 app.use(express.json());
-
-app.delete('/', (vem, vai) => {
-  const body = vem.body;
-
-  console.log(body);
-
-  return vai.json({ viu : 'olha o nodemon funcionando!' });
-});
+app.use(routes);
 
 app.listen(3333);
