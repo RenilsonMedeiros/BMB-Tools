@@ -35,7 +35,7 @@
 	        ```javascript
           "scripts": {
 		  	    "start": nodemon 'diretório-da-sua-aplicação-principal-o-index.js'
-		      }```
+		      }
 	    - Agora você pode executar no terminal `npm start`
     * 8º Passo: Instalar o teu banco de dados
 	    - Pode ser através de um DRIVER do próprio banco de dados
