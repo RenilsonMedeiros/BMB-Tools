@@ -48,6 +48,24 @@
 	    - Execute: `npm install sqlite3`
 	    - Execute: `npx knex init`       -> Vai criar uma arquivo chamado knexfile.js
     * 9º Passo: Configurando o banco de dados
-	    - No arquivo criado mude o dado do filename para o diretório do seu arquivo que irá conter as suas tabelas.
+	    - No arquivo criado mude o dado do filename, na parte de development, para o diretório do seu arquivo que irá conter as suas tabelas.
+        ```javascript
+        connection: {
+          filename: 'diretorio-do-arquivo-das-tabelas'
+        }
+        ```
 	    - Identificar as entidades e as funcionalidades da sua aplicação
+      - Na parte de development do arquivo knexfile.js adicione:
+        ```javascript
+        migrations: {
+          directory: './src/database/migrations'
+        }
+        ```
+      - Instalar as [migrations](http://knexjs.org/#Installation-migrations "Página das migrations") na sua aplicação.
+        No terminal execute: `npx knex migrate:make nome-da-migration`. Irá criar um arquivo no mesmo diretório que você informou acima com uns números e o nome da sua migration.
+        Se sua aplicação precisar de mais migration, basta executar o mesmo comando.
+        Para resolver o erro do `useNullAsDefault`, no arquivo knexfile.js adicione: `useNullAsDefault: true`.
+      - Após criar toda a estrutura da sua tabela, execute no terminal: `npx knex migrate:latest` -> Irá criar um arquivo com o nome que você definiu no filename.
+        
+        
    
