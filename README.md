@@ -68,6 +68,7 @@
       - Após criar toda a estrutura da sua tabela, execute no terminal: `npx knex migrate:latest` -> Irá criar um arquivo com o nome que você definiu no filename.
     * 10º Passo: Após terminar o backend completo, está na hora de instalar o cors na sua aplicação
       - No terminal execute: `npm install cors`
+      - Não esqueça de dizer ao seu app usar o `cors()`
         
         
    
