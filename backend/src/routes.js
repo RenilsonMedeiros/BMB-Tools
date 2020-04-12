@@ -1,23 +1,21 @@
 const express = require('express');
-const crypto = require('crypto');
 
-const connection = require('./database/connection');
+const SessionController = require('./controllers/SessionController');
+const UserController = require('./controllers/UserController');
+const ProfileController = require('./controllers/ProfileController');
+const ToolController = require('./controllers/ToolController');
 
 const routes = express.Router();
 
-routes.post('/user', async (request, response) => {
-  const { name, senha, admKey } = request.body;
+routes.post('/sessions', SessionController.index);
 
-  const id = crypto.randomBytes(4).toString('HEX');
+routes.get('/users', UserController.index);
+routes.post('/users', UserController.create);
 
-  await connection('users').insert({
-    id,
-    name,
-    senha,
-    admKey,
-  })
+routes.get('/profile', ProfileController.index);
 
-  return response.json({ id, name });
-});
+routes.get('/tools', ToolController.index);
+routes.post('/tools', ToolController.create);
+routes.delete('/tools/:id', ToolController.delete);
 
 module.exports = routes;

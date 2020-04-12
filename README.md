@@ -66,6 +66,8 @@
         Se sua aplicação precisar de mais migration, basta executar o mesmo comando.
         Para resolver o erro do `useNullAsDefault`, no arquivo knexfile.js adicione: `useNullAsDefault: true`.
       - Após criar toda a estrutura da sua tabela, execute no terminal: `npx knex migrate:latest` -> Irá criar um arquivo com o nome que você definiu no filename.
+    * 10º Passo: Após terminar o backend completo, está na hora de instalar o cors na sua aplicação
+      - No terminal execute: `npm install cors`
         
         
    
