@@ -1,6 +1,8 @@
 # BMB-Tools
  Treinando meu primeiro protótipo utilizando React e NodeJS
  ---
+ 
+ obs.: Aproveitei a semana OmniStack para "pegar o fio da miada"!
 
  Após instalar todos os aps necessários faça:
 
