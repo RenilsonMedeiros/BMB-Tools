@@ -39,7 +39,8 @@ form textarea {
   resize: vertical;
   min-height: 140px;
   color: #333;
-  padding: 16px 24px;
+  padding: 16px 40px;
+  margin-top: 10px;
   border: 1px Solid #dcdce6;
   border-radius: 8px;
   line-height: 24px;
@@ -48,7 +49,7 @@ form textarea {
 .container {
   width: 100%;
   max-width: 1120px;
-  height: 130vh;
+  height: 100vh;
   margin: 0 auto;
 
   display: flex;
@@ -72,7 +73,6 @@ form textarea {
   max-width: 400px;
   background: rgb(0, 0, 0, 0.3);
   border-radius: 10px;
-  text-align: justify;
   transition: 0.3s
 }
 
@@ -83,6 +83,7 @@ form textarea {
 .content p {
   color: #FFF;
   padding-bottom: 5px;
+  text-align: center;
 }
 
 .content form {
@@ -140,4 +141,11 @@ form textarea {
 
 .inputWithIcon svg + input:focus {
   border: 2px groove dodgerblue;
+}
+
+.inputWithIcon a {
+  cursor: pointer;
+  position: absolute;
+  right: 40px;
+  color: #000000;
 }

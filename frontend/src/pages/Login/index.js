@@ -1,8 +1,16 @@
 import React from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FiUser, FiLock, FiLogIn } from 'react-icons/fi';
+import { FiUser, FiLock, FiLogIn, FiEye } from 'react-icons/fi';
 
-export default function login() {
+export default function Login() {
+  const [type, setType] = useState('password');
+
+  function hidePassword() {
+    if(type === 'password') setType('text');
+    else setType('password');
+  }  
+
   return (
     <div className="container">
       <div className="content">
@@ -16,12 +24,13 @@ export default function login() {
               <FiUser aria-hidden="true" /> <input placeholder="Usuário" />
             </div>
             <div className="inputWithIcon">
-              <FiLock /> <input placeholder="Senha" type="password" />
+              <FiLock /> <input placeholder="Senha" type={type} id="senha" />
+              <a><FiEye onClick={hidePassword} /></a>
             </div>
 
             <button className="button" type="submit">Entrar</button>
 
-            <Link className="back-link" to="">
+            <Link className="back-link" to="/register">
               <FiLogIn /> Cadastrar Usuário
             </Link>
           </form>
