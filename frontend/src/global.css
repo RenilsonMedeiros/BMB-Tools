@@ -13,7 +13,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  -webkit-font-soomthing: antialiased;
 }
 
 input, button, textarea {
@@ -143,16 +142,16 @@ form textarea {
   border: 2px groove dodgerblue;
 }
 
-.inputWithIcon a {
+.inputWithIcon span {
   cursor: pointer;
   position: absolute;
   right: 40px;
 }
 
-.inputWithIcon a svg {
+.inputWithIcon span svg {
   border-radius: 15px;
   transition: 0.2s
 }
-.inputWithIcon a svg:hover {
+.inputWithIcon span svg:hover {
   background-color: #a7a5a5;
 }

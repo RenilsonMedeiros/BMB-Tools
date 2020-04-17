@@ -31,11 +31,11 @@ export default function Register() {
             </div>
             <div className="inputWithIcon">
               <FiLock /> <input placeholder="Senha" type={typeSenha} /> 
-              <a><FiEye onClick={hidePasswordSenha} /></a>
+              <span><FiEye onClick={hidePasswordSenha} /></span>
             </div>
             <div className="inputWithIcon">
               <FiKey type="cursor"/> <input placeholder="Chave do adm" type={typeChave} />
-              <a><FiEye onClick={hidePasswordChave} /></a>
+              <span><FiEye onClick={hidePasswordChave} /></span>
             </div>
 
             <button className="button" type="">Entrar</button>

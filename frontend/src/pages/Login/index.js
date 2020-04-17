@@ -25,11 +25,10 @@ export default function Login() {
             </div>
             <div className="inputWithIcon">
               <FiLock /> <input placeholder="Senha" type={type} id="senha" />
-              <a><FiEye onClick={hidePassword} /></a>
+              <span><FiEye onClick={hidePassword} /></span>
             </div>
 
             <button className="button" type="submit">Entrar</button>
-
             <Link className="back-link" to="/register">
               <FiLogIn /> Cadastrar Usuário
             </Link>
