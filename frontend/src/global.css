@@ -132,7 +132,7 @@ form textarea {
 }
 
 .inputWithIcon svg {
-  size: 20;
+  size:40px;
   position: absolute;
   left: 10px;
   top: 30px;
@@ -147,5 +147,12 @@ form textarea {
   cursor: pointer;
   position: absolute;
   right: 40px;
-  color: #000000;
+}
+
+.inputWithIcon a svg {
+  border-radius: 15px;
+  transition: 0.2s
+}
+.inputWithIcon a svg:hover {
+  background-color: #a7a5a5;
 }

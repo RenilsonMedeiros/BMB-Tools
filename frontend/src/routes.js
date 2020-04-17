@@ -3,7 +3,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Login from './pages/Login';
 import Register from './pages/Register';
-import NewLoan from './pages/NewLoan';
+import Borrows from './pages/Borrows';
+import NewBorrow from './pages/NewBorrow';
 
 export default function Routes() {
     return (
@@ -11,7 +12,8 @@ export default function Routes() {
             <Switch>
                 <Route path="/" exact component={Login} />
                 <Route path="/register" component={Register} />
-                <Route path="/loan/new" component={NewLoan} />
+                <Route path="/borrows" component={Borrows} />
+                <Route path="/borrow/new" component={NewBorrow} />
             </Switch>
         </BrowserRouter>
     )

@@ -17,11 +17,11 @@ export default function Login() {
         <h1>BMB Tools</h1>
 
         <section >
-          <form>
+          <form autoComplete="off">
             <p>Bem vindo ao estoque de ferramentas Bumba Meu Baja!</p>
 
             <div className="inputWithIcon">
-              <FiUser aria-hidden="true" /> <input placeholder="Usuário" />
+              <FiUser aria-hidden="true" /> <input placeholder="Usuário" autoComplete="on" />
             </div>
             <div className="inputWithIcon">
               <FiLock /> <input placeholder="Senha" type={type} id="senha" />

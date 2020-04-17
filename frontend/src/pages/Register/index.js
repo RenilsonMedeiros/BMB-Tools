@@ -2,7 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiUser, FiLock, FiKey, FiArrowLeft, FiEye } from 'react-icons/fi';
-import { DiTool } from 'react-icons/di'
 
 export default function Register() {
   const [typeSenha, setTypeSenha] = useState('password');

@@ -4,7 +4,7 @@ import { BsTools } from 'react-icons/bs';
 
 import './styles.css';
 
-export default function NewLoan() {
+export default function NewBorrow() {
   return (
     <div className="container">
       <div className="content">
