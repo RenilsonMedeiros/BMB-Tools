@@ -71,6 +71,19 @@
     * 10º Passo: Após terminar o backend completo, está na hora de instalar o cors na sua aplicação
       - No terminal execute: `npm install cors`
       - Não esqueça de dizer ao seu app usar o `cors()`
+    * 11º Passo: Instalar um cliente HTTP dentro da sua aplicação
+      - O cliente HTTP é responsável por fazer as chamadas APIs do nosso backend e obter as respostas
+      - Execute no seu terminal: `npm install axios`
+      - Crie um novo arquivo .js e acrescente: 
+        ```javascript
+        import axios from 'axios';
+        const api = axios.create({
+          baseURL: 'http://localhost:3333'
+        })
+        export default api;
+        ```
+      - Caso você esteja usando seu backend em uma outra porta, que não seja a 3333, troque-a 3333 no baseURL e acrescente a porta que você esteja usando.
+      - Pronto agora você já pode importar a variável api dentro do seus arquivos.
         
         
    

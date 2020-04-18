@@ -46,13 +46,18 @@
 }
 
 .content {
-  width: 100%;
-  height: 100%;
-  margin: 20px;
+  padding: 0 10px 10px;
 }
 
-.content section {
-  max-width: 98%;
+.content .list {
+  max-width: 100%;
+  background: rgb(0, 0, 0, 0.3);
+  border-radius: 10px;
+  transition: 0.3s
+}
+
+.content .u:hover {
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .content ul {
@@ -82,6 +87,7 @@
   font-size: 21px;
   text-align: justify;
   margin-left: 30px;
+  margin-right: 40px;
 }
 
 .content ul li p + strong {

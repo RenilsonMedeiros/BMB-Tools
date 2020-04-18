@@ -5,8 +5,9 @@ module.exports = {
     user_id = request.headers.authorization;
 
     const tools = await connection('tools')
+      .join('users', 'users.id', '=', 'tools.user_id')
       .where('user_id', user_id)
-      .select('*');
+      .select('tools.*', 'users.name');
 
     return response.json(tools);
   }

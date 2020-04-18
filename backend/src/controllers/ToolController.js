@@ -2,14 +2,11 @@ const connection = require('../database/connection');
 
 module.exports = {
   async index(request, response) {
-    const {page = 0} = request.query;
 
     const [count] = await connection('tools').count();
 
     const tools = await connection('tools')
       .join('users', 'users.id', '=', 'tools.user_id')
-      .limit(5)
-      .offset(page * 5)
       .select(['tools.*', 'users.name']);
     
     response.header('X-Total-Count', count['count(*)']);
