@@ -34,7 +34,7 @@ export default function Borrows() {
 
       setBorrow(borrow.filter(borrow => borrow.id !== id))
     } catch (err) {
-      alert('Erro ao deletar caso, tente novamente')
+      alert('Erro ao deletar empréstimo, tente novamente!');
     }
   }
 

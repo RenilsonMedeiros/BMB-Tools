@@ -6,7 +6,7 @@ import api from '../../services/api';
 export default function Login() {
   const [type, setType] = useState('password');
 
-  const [id, setId] = useState('');
+  const [name, setName] = useState('');
   const [senha, setSenha] = useState('');
 
   const history = useHistory();
@@ -20,10 +20,10 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      const response = await api.post('sessions', { id });
+      const response = await api.post('sessions', { name, senha });
 
-      localStorage.setItem('userId', id)
-      localStorage.setItem('userName', response.data.name);
+      localStorage.setItem('userId', response.data.id)
+      localStorage.setItem('userName', name);
 
       history.push('/borrows');
     } catch (err) {
@@ -45,8 +45,8 @@ export default function Login() {
               <input 
                 placeholder="Usuário" 
                 autoComplete="on" 
-                value={id}
-                onChange={e => setId(e.target.value)}
+                value={name}
+                onChange={e => setName(e.target.value)}
               />
             </div>
             <div className="inputWithIcon">

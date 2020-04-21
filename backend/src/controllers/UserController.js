@@ -11,8 +11,10 @@ module.exports = {
 
   async create(request, response) {
     const { name, senha, admKey } = request.body;
+
+    const findName = await connection('users').where('name', '=', name);
   
-    if(admKey != "myKey") return response.status(401).json({ error: "Operation not permitted" });
+    if(admKey != "myKey" || findName.length > 0) return response.status(401).json({ error: "Operation not permitted" });
   
     const id = crypto.randomBytes(4).toString('HEX');
   
